@@ -1,8 +1,13 @@
 package main.task2;
 
+import java.util.Scanner;
+
 public class Task2_2 {
     public static void main(String[] args) {
-        int number = 1;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        int number = in.nextInt();
+
         switch (number) {
             case 0:
                 System.out.println("Ноль");
@@ -35,7 +40,7 @@ public class Task2_2 {
                 System.out.println("Девять");
                 break;
             default:
-                System.out.println("Ведите число от 0 до 9");
+                System.out.println("Введите число от 0 до 9");
                 break;
         }
     }

@@ -2,6 +2,7 @@ package main.task2;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Task2_1 {
     public static void main(String[] args) {
@@ -17,7 +18,11 @@ public class Task2_1 {
         map.put(8, "Восемь");
         map.put(9, "Девять");
 
-        System.out.println(map.getOrDefault(-11, "Ведите число от 0 до 9"));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        int number = in.nextInt();
+
+        System.out.println(map.getOrDefault(number, "Введите число от 0 до 9"));
     }
 
 }
