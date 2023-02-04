@@ -1,4 +1,4 @@
- package main;
+ package main.task1;
 
 public class Task1 {
 
