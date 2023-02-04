@@ -6,7 +6,7 @@ public class Task5 {
     public static void main(String[] args) {
         int[] B = new int[25];
 
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < B.length; i++) {
             B[i] = (int) (Math.random() * 100);
         }
 

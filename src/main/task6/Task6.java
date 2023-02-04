@@ -6,7 +6,7 @@ public class Task6 {
     public static void main(String[] args) {
         int[] C = new int[20];
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < C.length; i++) {
             C[i] = (int) (Math.random() * 100);
         }
 
@@ -17,8 +17,8 @@ public class Task6 {
     static double average(int[] C) {
         double average = 0;
 
-        for (int digit : C) {
-            average += digit;
+        for (int number : C) {
+            average += number;
         }
 
         return average / C.length;
