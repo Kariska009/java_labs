@@ -1,0 +1,26 @@
+package main.task6;
+
+import java.util.Arrays;
+
+public class Task6 {
+    public static void main(String[] args) {
+        int[] C = new int[20];
+
+        for (int i = 0; i < 20; i++) {
+            C[i] = (int) (Math.random() * 100);
+        }
+
+        System.out.println(Arrays.toString(C));
+        System.out.println(average(C));
+    }
+
+    static double average(int[] C) {
+        double average = 0;
+
+        for (int digit : C) {
+            average += digit;
+        }
+
+        return average / C.length;
+    }
+}

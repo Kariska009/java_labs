@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class Task5 {
     public static void main(String[] args) {
-        int[] A = new int[25];
+        int[] B = new int[25];
 
         for (int i = 0; i < 25; i++) {
-            A[i] = (int) (Math.random() * 100);
+            B[i] = (int) (Math.random() * 100);
         }
 
-        System.out.println(Arrays.toString(A));
-        Arrays.sort(A);
-        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(B));
+        Arrays.sort(B);
+        System.out.println(Arrays.toString(B));
     }
 }
