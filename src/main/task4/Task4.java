@@ -3,10 +3,9 @@ package main.task4;
 import java.util.Arrays;
 
 public class Task4 {
-    static final int N = 25;
 
     public static void main(String[] args) {
-        int[] A = new int[N];
+        int[] A = new int[25];
 
         for (int i = 0; i < 25; i++) {
             A[i] = (int) (Math.random() * 100);
