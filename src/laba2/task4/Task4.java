@@ -1,4 +1,4 @@
-package main.task4;
+package laba2.task4;
 
 import java.util.Arrays;
 

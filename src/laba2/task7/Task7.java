@@ -1,4 +1,4 @@
-package main.task7;
+package laba2.task7;
 
 public class Task7 {
     public static void main(String[] args) {

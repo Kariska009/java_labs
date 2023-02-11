@@ -1,4 +1,4 @@
- package main.task1;
+ package laba2.task1;
 
 public class Task1 {
 

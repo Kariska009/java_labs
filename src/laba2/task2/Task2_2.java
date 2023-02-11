@@ -1,4 +1,4 @@
-package main.task2;
+package laba2.task2;
 
 import java.util.Scanner;
 

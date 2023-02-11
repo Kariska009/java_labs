@@ -1,4 +1,4 @@
-package main.task6;
+package laba2.task6;
 
 import java.util.Arrays;
 
