@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class Task6 {
     public static void main(String[] args) {
-        int[] C = new int[20];
+        int[] c = new int[20];
 
-        for (int i = 0; i < C.length; i++) {
-            C[i] = (int) (Math.random() * 100);
+        for (int i = 0; i < c.length; i++) {
+            c[i] = (int) (Math.random() * 100);
         }
 
-        System.out.println(Arrays.toString(C));
-        System.out.println(average(C));
+        System.out.println(Arrays.toString(c));
+        System.out.println(average(c));
     }
 
     static double average(int[] C) {

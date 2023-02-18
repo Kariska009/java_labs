@@ -179,7 +179,7 @@ public class nik {
             System.out.print("\t" + arrayC[i]);
             summ += arrayC[i];
         }
-        srznach = summ / 20;
+        srznach = summ / 20.;
         System.out.println("\nСреднее значение:" + srznach);
     }
 
