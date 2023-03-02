@@ -1,4 +1,4 @@
-package dopverochka;
+package doplerochka;
 
 import java.util.Arrays;
 import java.util.Random;
