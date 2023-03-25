@@ -14,12 +14,12 @@ public class Task1 {
         Random random = new Random();
 
         for (int i = 0; i < n; i++) {
-            a[i] = random.nextDouble(50) - 25;
+            a[i] = random.nextDouble() * 50 - 25;
             if (a[i] > 0) {
                 countPositiveA++;
             }
 
-            c[i] = random.nextDouble(50) - 25;
+            c[i] = random.nextDouble() * 50 - 25;
             if (c[i] < 0) {
                 countNegativeC++;
             }

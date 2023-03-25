@@ -13,7 +13,7 @@ public class Task3 {
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
-                a[i][j] = random.nextDouble(50) - 25;
+                a[i][j] = random.nextDouble() * 50 - 25;
             }
         }
 
