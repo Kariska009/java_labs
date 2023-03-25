@@ -7,7 +7,6 @@ import knigi.model.Publisher;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
