@@ -7,32 +7,29 @@ import knigi.model.Publisher;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Publisher vstu = new Publisher("VSTU");
-        Publisher iou = new Publisher("IOU");
+        List<Book> newBooks = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-        Author karisha009 = new Author("Karisha009");
-        Author dimaKing = new Author("Dima King");
+        for (;;) {
+            System.out.println("Добавить книгу? ");
+            String isAdd = scanner.nextLine().toLowerCase();
 
-        Book genshinImpact = new Book("Genshin Impact", new Author[]{karisha009},
-                vstu, LocalDate.of(2018, Month.MARCH, 10),
-                300, 399.99, Binding.SOFTCOVER);
-        Book kingOfNorth = new Book("King of North", new Author[]{dimaKing},
-                iou, LocalDate.of(2000, Month.JUNE, 5),
-                1000, 999.99, Binding.HARDCOVER);
-        Book miAndMu = new Book("Mi and Mu", new Author[]{dimaKing, karisha009},
-                vstu, LocalDate.of(2022, Month.DECEMBER, 15),
-                500, 59.99, Binding.HARDCOVER);
+            if (!isAdd.equals("да")) break;
 
-        Book[] books = new Book[]{genshinImpact, kingOfNorth, miAndMu};
+            newBooks.add(createBook());
+        }
+
+        Book[] books = newBooks.toArray(new Book[0]);
 
         System.out.println("Все наши книги : " + "[\n" + printBooks(books) + "]");
 
-        Scanner scanner = new Scanner(System.in);
         for(;;) {
             System.out.println("Введите 1, если хотите найти книги по автору.");
             System.out.println("Введите 2, если хотите найти книги по издательству.");
@@ -60,6 +57,28 @@ public class Main {
                     System.exit(0);
             }
         }
+    }
+
+    private static Book createBook() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите название книги: ");
+        String name = scanner.nextLine();
+        System.out.print("Введите автора: ");
+        String authorName = scanner.nextLine();
+        System.out.print("Введите издательство: ");
+        String publisherName = scanner.nextLine();
+        System.out.print("Введите год издательства(yyyy-mm-dd): ");
+        String yearOfPublish = scanner.nextLine();
+        System.out.print("Введите количество страниц: ");
+        String pages = scanner.nextLine();
+        System.out.print("Введите цену: ");
+        String price = scanner.nextLine();
+        System.out.print("Выберите переплет(Твердый/Мягкий): ");
+        String binding = scanner.nextLine();
+
+        return new Book(name, new Author[]{new Author(authorName)},
+                new Publisher(publisherName), LocalDate.parse(yearOfPublish),
+                Integer.parseInt(pages), Double.parseDouble(price), Binding.getBindingFromString(binding));
     }
 
     private static Book[] findBooksByAuthor(Book[] books, String authorName) {
