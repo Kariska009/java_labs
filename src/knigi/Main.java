@@ -6,7 +6,6 @@ import knigi.model.Book;
 import knigi.model.Publisher;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -61,6 +60,8 @@ public class Main {
 
     private static Book createBook() {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите идентификатор книги: ");
+        String id = scanner.nextLine();
         System.out.print("Введите название книги: ");
         String name = scanner.nextLine();
         System.out.print("Введите автора: ");
@@ -76,7 +77,7 @@ public class Main {
         System.out.print("Выберите переплет(Твердый/Мягкий): ");
         String binding = scanner.nextLine();
 
-        return new Book(name, new Author[]{new Author(authorName)},
+        return new Book(Integer.parseInt(id), name, new Author[]{new Author(authorName)},
                 new Publisher(publisherName), LocalDate.parse(yearOfPublish),
                 Integer.parseInt(pages), Double.parseDouble(price), Binding.getBindingFromString(binding));
     }
@@ -130,6 +131,10 @@ public class Main {
             if (book != null) {
                 str.append(book).append("\n");
             }
+        }
+
+        if (str.length() == 0) {
+            return "Нет книг.";
         }
         return str.toString();
     }

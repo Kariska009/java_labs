@@ -13,11 +13,9 @@ public final class Book {
     private final double price;
     private final Binding binding;
 
-    private static int innerId;
-
-    public Book(String name, Author[] authors, Publisher publisher, LocalDate yearOfPublication,
+    public Book(int id, String name, Author[] authors, Publisher publisher, LocalDate yearOfPublication,
                 int pages, double price, Binding binding) {
-        this.id = innerId++;
+        this.id = id;
         this.name = name;
         this.authors = authors;
         this.publisher = publisher;
@@ -62,7 +60,8 @@ public final class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", authors=" + Arrays.toString(authors) +
                 ", publisher=" + publisher.getName() +
                 ", yearOfPublication=" + yearOfPublication +
