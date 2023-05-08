@@ -7,7 +7,7 @@ public class Main {
         rectangle.inCons();
         System.out.println("Rectangle: " + rectangle);
 
-        new Rectangle(-1 , 2);
+        rectangle.minSquare(new Rectangle(-1, 2));
     }
 
 }

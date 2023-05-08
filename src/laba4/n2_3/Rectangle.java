@@ -3,10 +3,10 @@ package laba4.n2_3;
 import java.util.Scanner;
 
 public class Rectangle {
-    private int x1;
-    private int y1;
-    private int x2;
-    private int y2;
+    private double x1;
+    private double y1;
+    private double x2;
+    private double y2;
 
     public Rectangle(int x1, int y1, int x2, int y2) {
         this.x1 = x1;
@@ -15,7 +15,7 @@ public class Rectangle {
         this.y2 = y2;
     }
 
-    public Rectangle(int height, int width) {
+    public Rectangle(double height, double width) {
         if (height <= 0) {
             throw new IncorrectRectangleException("Высота должна быть больше 0. Текущее значение: " + height);
         }
@@ -67,8 +67,7 @@ public class Rectangle {
             this.y1 = Integer.parseInt(y1);
             this.x2 = Integer.parseInt(x2);
             this.y2 = Integer.parseInt(y2);
-        } catch (
-                NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Не число");
         }
     }
@@ -78,7 +77,7 @@ public class Rectangle {
         return "x1 = " + x1 + ", y1 = " + y1 + ", x2 = " + x2 + ", y2 = " + y2;
     }
 
-    private int calcSquare() {
+    private double calcSquare() {
         try {
             return (this.x2 - this.x1) * (this.y2 - this.y1);
         } catch (ArithmeticException e) {

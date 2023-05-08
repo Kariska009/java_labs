@@ -11,7 +11,7 @@ public class Main {
                 a[i] = (int) (Math.random() * 100);
             }
 
-            System.out.println(Arrays.toString(a)); // Ошибка при указании отоюражения неверного симлова в строке. Arrays.toString(a).charAt(1000)
+            System.out.println(Arrays.toString(a)); // Ошибка при указании отображения неверного симлова в строке. Arrays.toString(a).charAt(1000)
             int maxIndex = findMaxIndex(a);
             int minIndex = findMinIndex(a);
             System.out.println("Max index = " + maxIndex + ", " + "min index = " + minIndex);
